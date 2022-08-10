@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <script-example></script-example>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ScriptExample from "@/components/ScriptExample.vue";
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      tweets: [`tweet1`, `tweet2`, `tweet3`],
+      num_friends: 42,
+      logged_in: true,
+    };
+  },
+
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ScriptExample,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
